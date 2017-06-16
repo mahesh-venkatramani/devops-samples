@@ -22,12 +22,16 @@ public class HelloWorld {
 	}
 	private static String getCelsiusTemperature(String fahrenheitTemp){
 		String celsiusTemp = "";
-		Double celsius = 0.0;
-		if(fahrenheitTemp != ""){
-			Double fahrenheit = new Double(fahrenheitTemp);
-			celsius = ((fahrenheit - 32)*5)/9;
-			System.out.println("Celsius Temperature "+celsius);
-			celsiusTemp = celsius.toString();
+		try{
+			Double celsius = 0.0;
+			if(fahrenheitTemp != ""){
+				Double fahrenheit = new Double(fahrenheitTemp);
+				celsius = ((fahrenheit - 32)*5)/9;
+				System.out.println("Celsius Temperature "+celsius);
+				celsiusTemp = celsius.toString();
+			}
+		} catch (NumberFormatException nfe) {
+			System.err.println("Error : Invalid Temperature! "+nfe);
 		}
 		return celsiusTemp;
 	}
