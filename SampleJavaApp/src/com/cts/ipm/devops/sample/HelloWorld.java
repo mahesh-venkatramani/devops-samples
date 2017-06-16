@@ -15,7 +15,8 @@ public class HelloWorld {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Date currentDate = new Date();
-		System.out.println("Welcome to HelloWorld Application! Current Date is: "+currentDate);
+		System.out.println("Current Date is "+currentDate);
+		System.out.println("Welcome to HelloWorld Application!");
 	}
 
 }
